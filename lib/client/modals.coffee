@@ -48,6 +48,8 @@ Template.autoformModals.helpers
 		Session.get 'cmButtonClasses'
 	cmPrompt: () ->
 		Session.get 'cmPrompt'
+	cmSchema: () ->
+		Session.get 'cmSchema'
 
 Template.autoformModals.destroyed = -> $('body').unbind 'click'
 
@@ -55,6 +57,7 @@ Template.autoformModals.rendered = () ->
 	$('body').on "click", (e)->
 		if $(e.target).attr('href') == '#afModal'
 			collection = $(e.target).attr('collection')
+			schema = $(e.target).attr('schema')
 			operation = $(e.target).attr('operation')
 			_id = $(e.target).attr('doc')
 			html = $(e.target).html()
@@ -112,6 +115,7 @@ Template.autoformModals.rendered = () ->
 			Session.set('cmButtonContent',buttonContent)
 			Session.set('cmButtonClasses',buttonClasses)
 			Session.set('cmPrompt',prompt)
+			Session.set('cmSchema', schema)
 
 AutoForm.hooks(
 	cmForm : 
