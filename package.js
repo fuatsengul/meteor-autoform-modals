@@ -1,15 +1,8 @@
 Package.describe({
   name: 'fuatsengul:meteor-autoform-modals',
   summary: 'Schema added to yogiben:meteor-autoform-modals',
-  version: '1.0.1',
+  version: '1.0.7',
   git: 'https://github.com/fuatsengul/meteor-autoform-modals'
-});
-
-
-Package.describe({
-  summary: "Create, update and delete collections with modals",
-  version: "0.3.1",
-  git: "https://github.com/yogiben/meteor-autoform-modals"
 });
 
 Package.onUse(function(api) {
